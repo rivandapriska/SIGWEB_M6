@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title>Praktikum SIG Web minggu ke-3</title> 
+</head>
+
+<body>
+    <h1>Menghitung Bilangan Fibbonaci</h1>
+Angka     : <input type="text" id="textloop" style="margin-left: 10px;margin-bottom:10px ;"> <br>
+
+ <input type="button" id="Hitung" value="Hitung!" onclick="fibonacci_series(textloop.value)" /><br/><br/> 
+ 
+ Hasil Bilangan Fibbonaci: <span id="Jawaban"></span>
+
+
+<script>
+var fibonacci_series = function (n) 
+{
+  if (n==1) {
+    var loop = [0, 1];
+    return loop;
+  } 
+
+  else {
+    var s = fibonacci_series(n - 1);
+    s.push(s[s.length - 1] + s[s.length - 2]);
+    document.getElementById("Jawaban").innerHTML =s;
+    return s;
+  }
+   
+};
+</script>
+
+</body>
+</html>

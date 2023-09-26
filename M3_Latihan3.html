@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Praktikum SIG Web minggu ke-3</title>
+	<meta charset=”utf-8″>	
+</head>
+<body>
+    <h1>Validasi Usia</h1>
+    <p>Masukkan nama dan usia anda: </p>
+    Nama     : <input type="text" id="nama" style="margin-left: 10px; margin-bottom: 10px;"> <br>
+    Usia : <input type="text" id="usia" style="margin-left: 18px; margin-bottom: 10px"> <br>
+
+    <button onclick="klik()">Check</button>
+
+    <script>
+        function klik(){
+            var name, age;
+            name = document.getElementById("nama").value;
+            age = document.getElementById("usia").value;
+
+            if (name == ""  && age == "")  {
+                txt = "isikan nama dan usia!!";
+                alert(txt);
+            }
+
+            else if (name == "" )  {
+                txt = "isikan nama !!";
+                alert(txt);
+            }
+
+            else if (age == ""){
+                txt = "isikan usia!!\n ";
+                alert(txt);
+            }
+
+            else if(age == 0 || age <0){
+                txt = "Anda Game over!";
+                alert(txt);
+            }
+            
+            else if(age > 0 && age < 5){
+                txt = "’Anda masih bayi’";
+                alert(txt);
+            }
+
+            else if(age <= 15){
+                txt = "’Anda masih anak-anak’";
+                alert(txt);
+            }
+
+            else if(age <= 30){
+                txt = "’Anda masih remaja’";
+                alert(txt);
+            }
+
+            else if(age <=60){
+                txt = "’Anda sudah dewasa’";
+                alert(txt);
+            }
+
+            else{
+                txt = "’Anda sudah lansia’";
+                alert(txt);
+            }
+
+        }
+    </script>
+</body>
+</html>

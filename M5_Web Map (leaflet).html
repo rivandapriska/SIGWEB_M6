@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Web Map M5 </title>
+
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+   integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+   crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+   integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+   crossorigin=""></script>
+ 
+ <style>
+    html, body, section
+    {
+        position: relative;
+        height: 100%;
+        background-color: #eeffcd;
+    }
+
+    html
+    {
+        scroll-behavior: smooth;
+    }
+
+    #map {
+    width: 1000px;
+    height: 500px;
+    margin-top: 100px;
+    } 
+ </style>
+
+</head>
+
+<body>
+    <center>
+        <div id="map"></div>
+    </center>
+
+     <script>
+        var map = L.map('map',{
+        center: [-7.809582373352833,110.35952030235129],
+        zoom: 15
+        });
+
+        L.tileLayer('https://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            maxZoom: 25, 
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        })
+             .addTo(map);
+        
+        L.marker([-7.809582373352833,110.35952030235129])
+            .bindPopup('<center><img src="tamansari.jpg" width="300px" height="200px" title="Taman Sari," alt="Taman Sari"></center><h1>Taman Sari.</h1>')
+            .addTo(map)
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>M3_Latihan 2</title>
+	<meta charset=”utf-8″>	
+</head>
+<body>
+    <h1>Validasi Input</h1>
+    <p>Masukkan data berikut: </p>
+    E-mail   : <input type="email" id="email" style="margin-left: 34px; margin-bottom: 10px"> <br>
+    Username: <input type="uname" id="name" style="margin-left: 16px; margin-bottom: 10px;"> <br>
+    Password : <input type="password" id="pass" style="margin-left: 16px; margin-bottom: 10px"> <br>
+
+    <button onclick="klik()">Sign in</button>
+
+    <script>
+        function klik(){
+            var pw, check, txt;
+            var check = "sss";
+            pw = document.getElementById("pass").value;
+
+            if (pw === check) {
+                txt = "Password benar!";
+                alert(txt);
+            }
+
+            else{
+                txt = "Password salah!";
+                alert(txt);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>M3_Latihan1</title>
+	<meta charset=”utf-8″>
+	
+</head>
+<body>
+        <h1>Perhitungan bilangan faktorial</h1>
+        <h3>Masukkan angka</h3>
+
+        <div id="inputangka" style="float: left;">
+          <input type="text" id="angka">
+        </div>
+
+        <div id="tombol" style="float:left; margin-left: 10px;">
+            <button  onclick="fact()"> Hitung! </button>
+        </div>
+        <br>
+
+        
+        <p id="hasil"></p>
+        
+
+        <script>
+            function fact(){
+                var i, num, f;
+                f = 1;
+                num = document.getElementById("angka").value;
+
+                for(i = 1; i <= num; i++) {
+                    f = f * i;
+                }
+
+                document.getElementById("hasil").innerHTML = "Maka nilai faktorial dari " + num + " adalah: " + f ;
+            }
+
+        </script>
+
+
+
+</body>
+</html>
